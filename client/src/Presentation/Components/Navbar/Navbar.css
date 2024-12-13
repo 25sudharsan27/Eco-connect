@@ -1,0 +1,120 @@
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    font-family: 'Scada', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #226030;
+}
+
+.navbar-right {
+    padding:0px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links {
+    font-size: 18px;
+    font-family: 'Scada', sans-serif;
+    color: #226030;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.profile-pic-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Fixed dropdown */
+.dropdown1 {
+    position: fixed;   /* Ensuring it stays fixed on the screen */
+    top: 110px;          /* Leave space for the navbar */
+    right: 20px;        /* Align to the right side of the screen */
+    z-index: 999;       /* Ensure dropdown is on top of other content */
+    width: auto;
+}
+
+.dropdown {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-links {
+    font-size: 18px;
+    font-family: 'Scada', sans-serif;
+    color: #226030;
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+.dropdown-links:hover {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+.dropdown-content-line {
+    height: 1px;
+    width: 100%;
+    background-color: #226030;
+    margin: 10px 0;
+}
+
+.dropdown-link-heading {
+    font-size: 20px;
+    font-family: 'Scada', sans-serif;
+    color: #226030;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+
+.about-tag-left{
+    display:flex;
+    align-items:center;
+}
+
+.about-tag-username{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+
+@media screen and (max-width:800px){
+    .navbar-links{
+        display:none;   
+    }
+    .navbar{
+        height:50px;
+    }
+}

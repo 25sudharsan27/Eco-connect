@@ -1,0 +1,230 @@
+.campspostscontainer{
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap:30px;
+    width:100%;
+    padding:20px 0px;
+
+}
+
+.campspostsnavbar{
+    display:flex;
+    height:fit-content;
+    justify-content: space-evenly;
+    gap:20px;
+    width: 100%;
+
+}
+.campspostsnavbar-item{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px;
+    gap:13px;    
+    
+}
+.campuspostsnavbar-item::after{
+    content: "";
+
+    display: block;
+    background-color: #226030;
+    width: 100px;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.camps-posts{
+    font-size:26px;
+    font-weight:bold;
+    color:#414141;
+    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset:6px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #1D4726;
+}
+
+
+.camps-posts-btn{
+    color:#1D4726;
+    font-size:25px;
+    border:3px solid #1D4726;
+    padding:2px 8px;
+    border-radius:50%;
+}
+
+
+
+.campspostpage{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    /* grid-template-columns: repeat(300px,1fr); */
+    flex-wrap: wrap;
+    /* gap:20px; */
+    width:100%;
+
+}
+.campspost-item{
+    box-shadow: 0px 3px 5px 0px #525252;
+    border-radius:8px;
+    height:280px;
+    position:relative;
+    background-color: #fff;
+    padding:20px;
+    padding-bottom:10px;
+    width:25%;
+    margin:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.campspost-top{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+    max-height:220px;
+    min-height:200px;
+    /* border:1px solid black; */
+
+}
+.campspost-image{
+
+    height:100%;
+    border-radius:8px;
+    width:50%;
+    
+    background-size: cover;
+    object-fit:cover;
+    /* border:1px solid black; */
+}
+.campspost-content{
+    /* padding:10px; */
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.campspost-content-1{
+    padding:5px;
+    font-size:14px;
+    padding-top:0px;
+    color:#041C2D;
+    padding-left:13px;
+}
+
+.campspost-content-2{
+    display:flex;
+    justify-content: space-between;
+    align-items:end;
+    padding:10px;
+    padding-bottom:0px;
+}
+.campspost-content-2-1{
+    font-size:13px;
+    color:#041C2D;
+    font-weight:bold;
+}
+
+.campspost-bottom{
+    /* padding:10px; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+
+.campspost-content-value{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1px;
+}
+
+.campspost-content-value-image{
+    height:15px;
+    width:15px;
+    
+}
+.campspost-content-value-1{
+    font-size:9px;
+    color:#041C2D;
+}
+
+.campspost-bottom-heading{
+    padding-right:10px;
+    font-size:20px;
+    color:#041C2D;
+    font-weight:bold;
+}
+.campspost-bottom-date{
+    font-size:13px;
+    color:#041C2D;
+    font-weight:bold;
+}
+.campspost-footer{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding:20px;
+    height:100%;
+    
+}
+.campspost-readmore{
+    color:#041C2D;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1200px){
+    .campspost-item{
+        width:37%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .campspost-item{
+        width:80%;
+    }
+    .camps-posts{
+        font-size:20px;
+    }
+    .camps-posts-btn{
+        font-size:20px;
+        padding:2px 6px;
+    }
+    .campspost-item{
+        padding:8px;
+        height:240px;
+        
+    }
+    .campspost-content-1{
+        font-size:13px;
+    }
+    .campspost-top{
+        height:140px;
+        max-height:160px;
+        min-height:160px;
+    }
+    .campspost-content-2-1{
+        font-size:10px;
+    }
+    .campspost-bottom-heading{
+        font-size:18px;
+    }
+}
