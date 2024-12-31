@@ -1,0 +1,239 @@
+.home-post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+  }
+  
+  .home-post-item {
+    width: 100%;
+    /* max-width: 400px; */
+    margin: 20px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    box-shadow: 0px 3px 5px 0px #525252;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-post-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .home-post-user {
+    display: flex;
+  }
+  
+  .home-post-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .home-post-username {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .home-post-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-post-image {
+    width: 100%;
+    height: 100%;
+    max-height:600px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .home-post-content {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .home-post-show-more,
+  .home-post-show-comments {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top:20px;
+    text-align: center;
+    padding:0px;
+    
+    margin:0px;
+    margin-top:15px;
+  }
+  
+  .home-post-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .home-post-likes, .home-post-comments, .home-post-volunteer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-post-likes h1,
+  .home-post-comments h1,
+  .home-post-volunteer h1 {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  
+  .home-post-comments-container {
+    margin-top: 10px;
+  }
+  
+  .home-post-comment {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .home-post-comment-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-post-comment-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .home-post-comment-username {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size:15px;
+  }
+  
+  .home-post-comment-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .home-post-comment-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .home-post-date{
+    font-size: 15px;
+    color: #888;
+  }
+  .home-post-details{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.home-post-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin:0px;
+    color: #041C2D;
+}
+.home-post-content{
+    font-size: 15px;
+    margin:0px;
+    color: #041C2D;
+    line-height:22px;
+    padding:0px;
+    padding-top:30px;
+
+}
+
+.home-post-show-more{
+    
+    padding:0px;
+    padding-bottom:30px;
+}
+
+.home-post-bottom{
+    padding:0px 30px;
+    padding-top:20px;
+}
+
+.home-post-show-more1{
+    display:flex;
+    /* justify-content: space-between; */
+    gap:40px;
+    margin-top:20px;
+    align-items: flex-start;
+}
+
+.home-post-likes{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home-post-info{
+
+    display:flex;
+    align-items: center;
+    gap:30px;
+}
+
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .home-post-item {
+      width: 90%;
+    }
+  
+    .home-post-username {
+      font-size: 14px;
+    }
+  
+    .home-post-content {
+      font-size: 12px;
+    }
+  
+    .home-post-likes h1,
+    .home-post-comments h1,
+    .home-post-volunteer h1 {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-post-item {
+      width: 100%;
+    }
+  
+    .home-post-username {
+      font-size: 12px;
+    }
+  
+    .home-post-content {
+      font-size: 12px;
+    }
+  
+    .home-post-likes h1,
+    .home-post-comments h1,
+    .home-post-volunteer h1 {
+      font-size: 10px;
+    }
+  }
+  

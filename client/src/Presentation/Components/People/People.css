@@ -12,12 +12,13 @@
     margin:20px;
     position:relative;
     width:244px;
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 
 
 .people-container-1{
     /* display:flex; */
+    padding-bottom:50px;
     justify-content: center;
 }
 
