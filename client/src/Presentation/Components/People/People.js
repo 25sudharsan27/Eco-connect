@@ -29,6 +29,8 @@ const data = [
 
 const People = () =>{
     return (
+        <div className="people-container-1">
+            <h1 id="people-heading" className="about-heading">About</h1>
         <div id="people-container">
             {data.map((item,index)=>{
                 return (
@@ -37,15 +39,12 @@ const People = () =>{
                         <div className="people-bottom">
                             <h1 className="people-name">{item.name}</h1>
                             <h1 className="people-position">{item.position}</h1>
-                        </div>
-                        <div className="people-content">
-                            <h1 className="people-name">{item.name}</h1>
-                            <h1 className="people-position">{item.position}</h1>
-                            <p className="people-content-1">{item.content}</p>
+                            <p className="people-content">{item.content}</p>
                         </div>
                     </div>
                 )
             })}
+        </div>
         </div>
     )
 }

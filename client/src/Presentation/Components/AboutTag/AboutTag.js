@@ -1,4 +1,6 @@
 import './AboutTag.css';
+import address from '../../Images/address.svg';
+import phone from '../../Images/phone.svg';
 
 const AboutTag = () => {
 
@@ -28,14 +30,20 @@ const AboutTag = () => {
                 </div>
                 
                 <div className="about-tag-right">
-
+                    <div className="ab1">
+                        <img className="about-tag-address-img" src={address} alt="map" />
                     <div className="about-tag-address">
                         <h1 className="about-tag-city">Dindigul</h1>
                         <h1 className="about-tag-state" >Tamil Nadu</h1>
                         <h1 id="about-tag-country" className="about-tag-country">India</h1>
                     </div>
-                    <div className="about-ph-no">
-                        <h1 id="about-tag-ph-no" className="about-tag-ph-no">+91 1234567890</h1>
+                    </div>
+                    <div className="ab1">
+                        <img className="about-tag-address-img" src={phone} alt="map" />
+
+                        <div className="about-ph-no">
+                            <h1 id="about-tag-ph-no" className="about-tag-ph-no">+91 1234567890</h1>
+                        </div>
                     </div>
                 </div>
             </div>
