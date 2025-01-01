@@ -6,15 +6,15 @@ import { useState } from 'react';
 import Camps from '../../Components/Camps/Camps';
 import Peoples from '../../Components/Peoples/Peoples';
 const Home = () => {
-    const [curstate, setCurstate] = useState("posts");
-    
+    const [curstate, setCurstate] = useState("Posts");
+    const navlist = ["Posts", "Camps & Events", "Peoples & Organizations"];
     
     return (
         <div className="root">
             <Navbar statelocation="home"/>
              
-            <HomeNav st={setCurstate}/>
-            {curstate === "posts" ? <Posts/> : (curstate === "camps" ? <Camps/> : (curstate === "people" ? <Peoples/> : <h1>404</h1>))}
+            <HomeNav st={setCurstate} navlist={navlist}/>
+            {curstate === "Posts" ? <Posts/> : (curstate === "Camps & Events" ? <Camps/> : (curstate === "Peoples & Organizations" ? <Peoples/> : <h1>404</h1>))}
 
             {/* <h1>Home</h1> */}
         </div>

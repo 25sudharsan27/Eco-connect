@@ -1,24 +1,23 @@
 import './HomeNav.css';
 
-const HomeNav = ({ st }) => {
+const HomeNav = ({ st ,navlist}) => {
 
     const handleClick = (e) => {
         console.log("hi");
         st(e);
     }
-
+    const list = navlist;
     return (
         <div className="home-nav">
             <div id="home-nav-container" className="campspostsnavbar">
-                <div onClick={() => handleClick("posts")} id="homenav-posts" className="campspostsnavbar-item">
-                    <button id="camps-post-nav" className="camps-posts">Posts</button>
-                </div>
-                <div onClick={() => handleClick("camps")} id="homenav-camps" className="campspostsnavbar-item">
-                    <button id="camps-post-nav" className="camps-posts">Campaigns and Events</button>
-                </div>
-                <div onClick={() => handleClick("people")} id="homenav-camps" className="campspostsnavbar-item">
-                    <button id="camps-post-nav" className="camps-posts">Peoples & Organizations</button>
-                </div>
+                {list.map((item,index)=>
+                    
+                        <div onClick={() => handleClick(item)} id="homenav-camps" className="campspostsnavbar-item">
+                            <button id="camps-post-nav" className="camps-posts">{item}</button>
+                        </div>
+                    )
+                }
+                
             </div>
         </div>
     );

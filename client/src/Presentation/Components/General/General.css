@@ -1,0 +1,77 @@
+.campspostsnavbar-item{
+    display:flex;
+    flex-direction:column ;
+    align-items:flex-start;
+    gap:20px;
+}
+
+
+.general-item{
+    
+}
+
+
+.general-cont{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content:space-evenly;
+    padding:20px;
+    margin-top:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+
+
+}
+.general-reject-btn{
+    background-color: #e43030;
+    color:white;
+    border:none;
+    /* padding:10px; */
+    /* border-radius:5px; */
+    cursor:pointer;
+}
+.connections-message-btn{
+    background-color: #438ac9;
+    color:white;
+    border:none;
+    /* padding:10px; */
+    /* border-radius:5px; */
+    cursor:pointer;
+}
+
+.general-item{
+    background-color: white;
+    border-radius:11px;
+    box-shadow:0px 3px 5px 0px #525252;
+    width:300px;
+    padding:10px;
+}
+
+.general-image{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:13px;
+}
+.general-top{
+    display:flex;
+    /* padding:10px; */
+    gap:10px;
+}
+.general-content{
+}
+
+.general-bottom{
+    display:flex;
+    gap:20px;
+    padding-top:10px;
+}
+
+#general-heading{
+    /* font-size:20px; */
+    font-weight:bold;
+    /* padding:10px; */
+    margin:0px;
+    padding:0px;
+}
