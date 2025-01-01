@@ -1,7 +1,7 @@
 import './Navbar.css';
 import { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({statelocation}) => {
     const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
@@ -21,6 +21,15 @@ const Navbar = () => {
         <div>
             <div className="navbar">
                 <h1 className="navbar-logo">EcoConnect</h1>
+                
+                {statelocation === "home" ? 
+                    <div className="navbar-search-container">
+                        <img className="navbar-search-icon" src="https://img.icons8.com/ios/452/search--v1.png" alt="search-icon" />
+                        <input className="navbar-search" type="text" placeholder="Search" />
+                        <button className="navbar-search-button">Search</button>
+                    </div>
+                : null}
+                
                 <div className="navbar-right">
                     <a className="navbar-links" href="/">Home</a>
                     <a className="navbar-links" href="/profile">Profile</a>

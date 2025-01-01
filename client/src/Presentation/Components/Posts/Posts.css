@@ -2,9 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 30px;
+    padding-left:200px;
+    min-width:70vh;
+    /* width:70%; */
   }
   
+  #home-post-cont{
+    width:100%;
+    padding-left:20px;
+    margin-top:40px;
+  }
   .home-post-item {
     width: 100%;
     /* max-width: 400px; */
@@ -22,10 +30,15 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    gap:30px;
+    align-items: center;
   }
   
   .home-post-user {
     display: flex;
+    align-items: center;
+    gap:30px;
+    padding-left:20px;
   }
   
   .home-post-user-image {
@@ -37,17 +50,20 @@
   }
   
   .home-post-username {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
   }
   
   .home-post-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 5px 10px;
+    padding: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    margin:0px;
+    padding:8px 12px;
+    height:fit-content;
   }
   
   .home-post-image {
@@ -196,6 +212,164 @@
     gap:30px;
 }
 
+.home-post-content-container{
+  display:flex;
+  gap:30px;
+}
+.home-post-container1{
+  display:flex;
+  /* gap:30px; */
+  margin-top:70px;
+}
+
+.home-post-sidebar{
+  /* width:300px; */
+  height:100vh;
+  background-color:#ffffff;
+  /* padding:20px; */
+  position:fixed;
+  top:106px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  width:200px;
+}
+#homenav-line1{
+  padding-top:30px;
+  width:200px;
+}
+
+
+.home-message-bar{
+  width:300px;
+  height:80vh;
+  position:fixed;
+  right:0px;
+  top:128px;
+  background-color:#ffffff;
+
+}
+
+/* Modify the overall layout to make the posts adjust when the message box appears */
+.home-post-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  /* padding-left: 200px; */
+  transition: margin-right 0.3s ease; /* Smooth transition for adjusting the posts */
+}
+
+.home-post-container.with-message-box {
+  margin-right: 500px; /* Adjust the posts' margin when message box is visible */
+}
+
+.home-message-bar {
+  width: 300px;
+  height: 80vh;
+  position: fixed;
+  right: 0px;
+  top: 128px;
+  background-color: #ffffff;
+  display: none; /* Hide message box by default */
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+}
+
+.home-message-bar.visible {
+  display: block; /* Show message box when visible class is applied */
+}
+
+/* Floating button styles */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+.floating-btn:hover {
+  opacity: 0.8;
+}
+.home-post-container1 {
+  display: flex;
+  margin-top: 70px;
+}
+
+.home-post-sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.home-post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 220px; /* Ensure content doesn't overlap the sidebar */
+  width: 100%;
+  transition: margin-right 0.3s ease;
+}
+
+.home-post-container.with-message-box {
+  margin-right: 300px; /* Adjust this when the message box is visible */
+}
+
+.home-message-bar {
+  border-radius:12px;
+  width: 300px;
+  height: 80vh;
+  position: fixed;
+  right: 0px;
+  top: 120px;
+  margin:10px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.float-btn-icon{
+  height:30px;
+  width:30px;
+}
+.floating-button {
+  position: fixed;
+  right: 30px;
+  top:140px;
+  
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding:7px 10px;
+  padding-bottom:5px;
+
+  border-radius: 50%;
+  cursor: pointer;
+  z-index:10000;
+  font-size: 18px;
+}
+
+.floating-button:hover {
+  background-color: #45a049;
+}
+
+
   /* Responsive Design */
   @media (max-width: 800px) {
     .home-post-item {
@@ -216,6 +390,8 @@
       font-size: 12px;
     }
   }
+
+  
   
   @media (max-width: 480px) {
     .home-post-item {
@@ -224,6 +400,10 @@
   
     .home-post-username {
       font-size: 12px;
+      padding-left:0px;
+    }
+    .home-post-user{
+      gap:10px;
     }
   
     .home-post-content {
@@ -234,6 +414,13 @@
     .home-post-comments h1,
     .home-post-volunteer h1 {
       font-size: 10px;
+    }
+    .home-post-user-image {
+      width: 40px;
+      height: 40px;
+      /* padding:0px 10px; */
+      padding-left:0px;
+      margin-left:-7px;
     }
   }
   

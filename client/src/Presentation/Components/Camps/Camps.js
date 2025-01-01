@@ -1,10 +1,10 @@
-import './Posts.css';
+import '../Posts/Posts.css';
 import React, { useState } from 'react';
 import like from '../../Images/like1.svg';
 import comments from '../../Images/comments.svg';
-import { useRef } from 'react';
+import './Camps.css';
 import message from '../../Images/message.svg';
-const Posts = () => {
+const Camps = () => {
     const data = [
         {
             "image": "https://www.youngisthan.in/wp-content/uploads/2018/10/ngo-970x582.jpg",
@@ -14,6 +14,8 @@ const Posts = () => {
             "comments": 5,
             "date": "10-12-2024",
             "volunteer": 27,
+            "duration" : "17 Dec 2024 - 20 Dec 2024",
+            "location": "21 WillStreet, Muzzam ,Mumbai, India",
             "comments_data": [
                 {
                     "image": "https://www.w3schools.com/howto/img_avatar.png",
@@ -115,6 +117,10 @@ const Posts = () => {
             "comments": 15,
             "date": "09-12-2024",
             "volunteer": 27,
+            "duration" : "17 Dec 2024 - 20 Dec 2024",
+
+            "location": "21 WillStreet, Muzzam ,Mumbai, India",
+
             "comments_data": [
                 {
                     "image": "https://www.w3schools.com/howto/img_avatar.png",
@@ -197,6 +203,10 @@ const Posts = () => {
             "comments": 7,
             "date": "07-12-2024",
             "volunteer": 27,
+            "location": "21 WillStreet, Muzzam ,Mumbai, India",
+            "duration" : "17 Dec 2024 - 20 Dec 2024",
+
+
             "comments_data": [
                 {
                     "image": "https://www.w3schools.com/howto/img_avatar.png",
@@ -237,6 +247,8 @@ const Posts = () => {
             "likes": 40,
             "comments": 12,
             "date": "06-12-2024",
+            "duration" : "17 Dec 2024 - 20 Dec 2024",
+
             "volunteer": 27,
             "comments_data": [
                 {
@@ -279,6 +291,9 @@ const Posts = () => {
             "comments": 18,
             "date": "05-12-2024",
             "volunteer": 27,
+            "location": "21 WillStreet, Muzzam ,Mumbai, India",
+            "duration" : "17 Dec 2024 - 20 Dec 2024",
+
             "comments_data": [
                 {
                     "image": "https://www.w3schools.com/howto/img_avatar.png",
@@ -313,10 +328,9 @@ const Posts = () => {
             ]
         }
     ]
-    
-  const [expandedPosts, setExpandedPosts] = useState({}); // For expanding post content
+    const [expandedPosts, setExpandedPosts] = useState({}); // For expanding post content
   const [expandedComments, setExpandedComments] = useState({}); // For controlling the number of comments shown
-  const [showMessageBox, setShowMessageBox] = useState(false); // For toggling the message box visibility
+ const [showMessageBox, setShowMessageBox] = useState(false); // For toggling the message box visibility
     
   const toggleContent = (index) => {
     setExpandedPosts((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -325,92 +339,97 @@ const Posts = () => {
   const toggleComments = (index) => {
     setExpandedComments((prev) => ({ ...prev, [index]: prev[index] ? prev[index] + 5 : 5 }));
   };
-
   const toggleMessageBox = () => {
     setShowMessageBox(!showMessageBox); // Toggle message box visibility
   };
 
   return (
     <div className="home-post-container1">
-      <div className="home-post-sidebar">
-        <div id="homenav-line1" className="campspostsnavbar-item">
-          <a href="/camps" id="homenav-posts" className="camps-posts">Filters</a>
+        <div className="home-post-sidebar">
+            <div id="homenav-line1" className="campspostsnavbar-item">
+                    <a href="/camps" id="homenav-posts" className="camps-posts">Filters</a>
+            </div>
         </div>
-      </div>
-      <div id="home-post-cont" className={`home-post-container ${showMessageBox ? 'with-message-box' : ''}`}>
+        <div id="home-post-cont" className={`home-post-container ${showMessageBox ? 'with-message-box' : ''}`}>
         {data.map((item, index) => (
-          <div className="home-post-item" key={index}>
+            <div className="home-post-item" key={index}>
             <div className="home-post-top">
-              <div className="home-post-user">
+                <div className="home-post-user">
                 <img src="https://www.w3schools.com/howto/img_avatar.png" className="home-post-user-image" alt="user" />
                 <h1 className="home-post-username">User123</h1>
-              </div>
+                </div>
             </div>
             <img src={item.image} className="home-post-image" alt="post" />
             <div className="home-post-bottom">
-              <h1 className="home-post-date">{item.date}</h1>
-              <div className="home-post-details">
+                <h1 className="home-post-date">{item.date}</h1>
+                <div className="home-post-details">
                 <div className="home-post-content-container">
-                  <h1 className="home-post-title">{item.title}</h1>
-                  <button className="home-post-btn">Follow</button>
-                </div>
-              </div>
-              
-              <p className="home-post-content">
-                {expandedPosts[index] ? item.content : `${item.content.substring(0, 400)}...`}
-              </p>
-            
-              <div className="home-post-show-more1">
-                <button onClick={() => toggleContent(index)} className="home-post-show-more">
-                  {expandedPosts[index] ? "Show Less" : "Show More"}
-                </button>
-                <div className="home-post-info">
-                  <div className="home-post-likes">
-                    <img src={like} className="home-post-like-icon" alt="like" />
-                    <h1>{item.likes}</h1>
-                  </div>
-                  <div className="home-post-likes">
-                    <img src={comments} className="home-post-like-icon" alt="like" />
-                    <h1>{item.comments}</h1>
-                  </div>
-                </div>
-              </div>
-              <div className="home-post-com">
-                <h1 className="home-post-content">comment</h1>
-                <input type="text" className="home-post-comment-input" placeholder="Write a comment..." />
-              </div>
+                    <h1 className="home-post-title">{item.title}</h1>
+                    <button className="home-post-btn">Join</button>
+                    <button className="home-post-btn" id="home-donate-btn">Donate</button>
+                    <h1 className="home-post-date">Volunteers {item.volunteer}</h1>
 
-              <div className="home-post-comments-container">
+                </div>
+
+                </div>
+                <h1 id="post-location1" className="home-post-content">{item.duration}</h1>
+                <h1 id="post-location" className="home-post-content">{item.location}</h1>
+
+                    <p className="home-post-content">
+                    {expandedPosts[index] ? item.content : `${item.content.substring(0, 400)}...`}
+                    </p>
+            
+                <div className="home-post-show-more1">
+                    <button onClick={() => toggleContent(index)} className="home-post-show-more">
+                    {expandedPosts[index] ? "Show Less" : "Show More"}
+                    </button>
+                    <div className="home-post-info">
+                        <div className="home-post-likes">
+                            <img src={like} className="home-post-like-icon" alt="like" />
+                            <h1>{item.likes}</h1>
+                        </div>
+                        <div className="home-post-likes">
+                        <img src={comments} className="home-post-like-icon" alt="like" />
+                        <h1>{item.comments}</h1>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div className="home-post-com">
+                    <h1 className="home-post-content">comment</h1>
+                    <input type="text" className="home-post-comment-input" placeholder="Write a comment..." />
+                </div>
+                <div className="home-post-comments-container">
                 {expandedComments[index] > 0 && (
-                  item.comments_data.slice(0, expandedComments[index]).map((comment, idx) => (
+                    item.comments_data.slice(0, expandedComments[index]).map((comment, idx) => (
                     <div className="home-post-comment" key={idx}>
-                      <div className="home-post-comment-content">
+                        <div className="home-post-comment-content">
                         <img src={comment.image} className="home-post-comment-image" alt="user" />
                         <h1 className="home-post-comment-username">{comment.name}</h1>
                         <h1 className="home-post-comment-date">{comment.date}</h1>
-                      </div>
-                      <p className="home-post-comment-text">{comment.content}</p>
+                        </div>
+                        <p className="home-post-comment-text">{comment.content}</p>
                     </div>
-                  ))
+                    ))
                 )}
-              </div>
-              <button onClick={() => toggleComments(index)} className="home-post-show-more">
-                {expandedComments[index] ? "Show comments" : "Show comments"}
-              </button>
+                </div>
+                <button onClick={() => toggleComments(index)} className="home-post-show-more">
+                    {expandedComments[index]  ?  "Show comments" :"Show comments"}
+                    </button>
             </div>
-          </div>
+            </div>
         ))}
-      </div>
-      
-      <button className="floating-button" onClick={toggleMessageBox}><img src={message} className="float-btn-icon"/></button>
-
-      {showMessageBox && (
-        <div className="home-message-bar">
-          {/* Message box content */}
         </div>
-      )}
+        <button className="floating-button" onClick={toggleMessageBox}><img src={message} className="float-btn-icon"/></button>
+        
+              {showMessageBox && (
+                <div className="home-message-bar">
+                  {/* Message box content */}
+                </div>
+              )}
     </div>
   );
 };
 
-export default Posts;
+export default Camps;
